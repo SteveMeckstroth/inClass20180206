@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import conveyor.Conveyor;
 import device.Device;
+import hydraulicPump.HydraulicPump;
 import motor.Motor;
 import palletizer.Palletizer;
 import scanner.Scanner;
@@ -16,10 +17,13 @@ public class Main {
 		devices.add(new Motor());
 		devices.add(new Palletizer());
 		devices.add(new Conveyor());
+		devices.add(new HydraulicPump());
 		devices.add(new Motor());
 		devices.add(new Motor());
+		devices.add(new HydraulicPump());
 		devices.add(new Conveyor());
 		devices.add(new Palletizer());
+		devices.add(new HydraulicPump());
 		devices.add(new Scanner());
 		devices.add(new Motor());
 		devices.add(new Palletizer());
@@ -28,9 +32,9 @@ public class Main {
 		for(Device d : devices) {
 			//Late-binding super-hero
 			// We have a problem.  Only turn on the Conveyors
-			if (d instanceof Conveyor) {
+			//if (d instanceof Conveyor) {
 				d.start();
-			}
+			//}
 		}
 		
 		
